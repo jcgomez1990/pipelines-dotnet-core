@@ -20,11 +20,11 @@ steps:
   displayName: Build
   inputs:
     command: build
-    projects: '$(Build.SourcesDirectory)/Pagina Web/SoloptWebsite/SoloptWebsite.csproj'
+    projects: 'Pagina Web/SoloptWebsite/SoloptWebsite.csproj'
     arguments: '--configuration Release' # Update this to match your need
 
 - task: DotNetCoreCLI@2
   inputs:
     command: test
-    projects: '$(Build.SourcesDirectory)/Pagina Web/SoloptWebsite/SoloptWebsite.csproj'
+    projects: 'Pagina Web/SoloptWebsite/SoloptWebsite.csproj'
     arguments: '--configuration $(buildConfiguration)'
